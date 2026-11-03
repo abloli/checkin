@@ -1,6 +1,6 @@
 #!name=HostLoc签到
 #!desc=HostLoc每日自动签到：自动抓取Cookie，每天9:05签到
-#!author=Muse
+#!author=iloli
 
 [Script]
 cron "5 9 * * *" script-path=https://raw.githubusercontent.com/abloli/checkin/main/loon/HostLocCheckin.js, timeout=60, enabled=true, tag=HostLoc签到
