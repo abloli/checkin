@@ -1,6 +1,6 @@
 #!name=NodeSeek签到
 #!desc=NodeSeek每日自动签到：自动抓取Cookie，每天9:00签到（默认试试手气）
-#!author=Muse
+#!author=iloli
 
 [Script]
 cron "0 9 * * *" script-path=https://raw.githubusercontent.com/abloli/checkin/main/loon/NodeSeekCheckin.js, timeout=30, enabled=true, tag=NodeSeek签到
