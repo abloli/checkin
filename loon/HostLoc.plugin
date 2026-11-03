@@ -1,0 +1,10 @@
+#!name=HostLoc签到
+#!desc=HostLoc每日自动签到：自动抓取Cookie，每天9:05签到
+#!author=Muse
+
+[Script]
+cron "5 9 * * *" script-path=HostLocCheckin.js, timeout=60, enabled=true, tag=HostLoc签到
+http-request ^https?://(www\.)?hostloc\.com/ script-path=HostLocCheckin.js, timeout=10, enabled=true, tag=HostLoc获取Cookie
+
+[MITM]
+hostname = hostloc.com, www.hostloc.com

@@ -1,0 +1,10 @@
+#!name=NodeSeek签到
+#!desc=NodeSeek每日自动签到：自动抓取Cookie，每天9:00签到（默认试试手气）
+#!author=Muse
+
+[Script]
+cron "0 9 * * *" script-path=NodeSeekCheckin.js, timeout=30, enabled=true, tag=NodeSeek签到
+http-request ^https://www\.nodeseek\.com/ script-path=NodeSeekCheckin.js, timeout=10, enabled=true, tag=NodeSeek获取Cookie
+
+[MITM]
+hostname = www.nodeseek.com
