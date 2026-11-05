@@ -1,0 +1,13 @@
+#!name=BitsFlood签到
+#!desc=BitsFlood每日自动签到：自动抓取Cookie，每天9:10签到（默认试试手气）
+#!author=iloli
+
+[Argument]
+cron = input,"10 9 * * *",tag=签到时间,desc=cron表达式，分时日月周，默认每天9:10
+
+[Script]
+cron {cron} script-path=https://raw.githubusercontent.com/abloli/checkin/main/loon/BitsFloodCheckin.js, timeout=30, enabled=true, tag=BitsFlood签到
+http-request ^https://(www\.)?bitsflood\.com/ script-path=https://raw.githubusercontent.com/abloli/checkin/main/loon/BitsFloodCheckin.js, timeout=10, enabled=true, tag=BitsFlood获取Cookie
+
+[MITM]
+hostname = bitsflood.com, www.bitsflood.com
