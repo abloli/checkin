@@ -15,7 +15,7 @@ var COOKIE_KEY = 'bitsflood_cookie';
 var UA_KEY = 'bitsflood_ua';
 var ACCEPT_KEY = 'bitsflood_accept';
 var ACCEPT_LANG_KEY = 'bitsflood_accept_lang';
-var DEFAULT_UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1';
+var DEFAULT_UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1';
 var RANDOM = true; // true = 试试手气（随机鸡腿），false = 固定鸡腿 x5
 
 function notify(title, sub, body) {
